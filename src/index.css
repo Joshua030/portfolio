@@ -1,69 +1,196 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* --- 01 TYPOGRAPHY SYSTEM
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+--Font sizes (px):
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+--- 16px === 1 rem
+
+-- Font weights
+Default: 400
+Medium:500
+semi-bold: 600
+Bold: 700
+
+-- Line heights
+Default: 1
+small: 1.05
+Medium: 1.2
+paragraph default: 1.6
+
+-- Letter spacing
+-0.5px
+0.75px */
+
+/* ROOT PAGE */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+html {
+  /* font-size: 10px; */
+  /* 10px/16px = 0.625 */
+  font-size: 62.5%;
+  overflow-x: hidden;
+  /* Does not worl on Safari */
+  /* scroll-behavior: smooth; */
 }
 
 body {
-  margin: 0;
+  font-family: "Encode Sans Condensed", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #333232;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+.hero-Section {
+  height: 100vh;
+  background-color: #d9d9d9;
+}
+
+/* NAV BAR */
+
+.firstContainer {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.mainHeader {
+  height: 15vh;
+  /* width: 100%; */
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0 5rem;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+.mainHeader h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.mainNav {
+  display: flex;
+  gap: 12rem;
+}
+.mainNav li {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.navHeader {
+  margin-left: auto;
+}
+
+.line {
+  display: inline-block;
+  height: 3px;
+  width: 95%;
+  background-color: black;
+  align-self: center;
+  /* transition: all 7s; */
+}
+
+.hovered {
+  background: linear-gradient(to right, lightgrey, black);
+}
+
+.titleTrf {
+  transform: scale(1.1);
+  transform: rotate(-5deg);
+  background: linear-gradient(to right, lightgrey, #999);
+}
+
+.nav-links {
+  text-decoration: none;
+  color: #333232;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.nav-links-active {
+  background-color: red;
+}
+.navChange {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 2px black, 0 0 25px #444, 0 0 5px #222;
+}
+
+/* INNER SECTION */
+
+.inner-Section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 85vh;
+}
+
+.information-Header {
+  padding: 5rem 8rem;
+  display: flex;
+  gap:12rem;
+  flex-direction: column;
+  justify-self: center;
+  align-self: center;
+
+}
+
+.gallery-item img {
+  display: block;
+  width: 46rem;
+  height: 37rem;
+  /* grid-row: 1/4;
+  grid-column: 2/3; */
+border-radius: 100%;
+
+  opacity: 0.7;
+
+  transition: all 0.4s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+.gallery-item {
+  /* overflow: hidden; */
+  justify-self: center;
+  align-self: center;
+  /* border-style: 2px solid black; */
+}
+
+/* .hero-Header {
+  justify-self: center;
+  align-self: center;
+} */
+
+.hero-Header h1 {
+  font-size: 6rem;
+  margin-bottom: 1rem;
+}
+
+.hero-Header h3 {
+  font-size: 2rem;
+  color: #444;
+  font-weight: 500;
+}
+
+.hero-Header h2 {
+  font-size: 3rem;
+  color: #444;
+  font-weight: 600;
+}
+
+.footer-Hero h3{
+  font-size: 2rem;
+    margin-bottom: 3px;
+}
+.footer-Hero p {
+  font-size: 1.3rem;
 }
