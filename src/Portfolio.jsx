@@ -1,6 +1,9 @@
-import { NavBar } from "./components/NavBar";
+import About from "./components/About";
+import NavBar from "./components/NavBar";
 
-export const Portfolio = () => {
+
+
+const Portfolio = () => {
   return (
     <>
       <div className="hero-Section">
@@ -14,8 +17,8 @@ export const Portfolio = () => {
             <div className="hero-Header">
               <h2>
                 Currently looking for a full-time position as a{" "}
-                <strong>W</strong>
-                eb <stron>D</stron>eveloper.
+                <b>W</b>
+                eb <b>D</b>eveloper.
               </h2>
             </div>
             <div className="footer-Hero">
@@ -32,6 +35,11 @@ export const Portfolio = () => {
 </figure>
         </div>
       </div>
+      <div id="about">
+      <About />
+      </div>
     </>
   );
 };
+
+export default Portfolio;

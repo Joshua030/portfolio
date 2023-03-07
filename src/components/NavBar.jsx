@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-export const NavBar = () => {
+
+const NavBar = () => {
   const date = new Date().getFullYear();
 
   const [hovered, setHovered] = useState("");
@@ -34,7 +35,7 @@ const [navLink, setnavLink] = useState('')
               <li>
                 <NavLink
                   to="messages"
-                  activeClassName="nav-links-active"
+                  // activeClassName="nav-links-active"
                   className={`nav-links ${navLink}`}
                 >
                   Home
@@ -43,25 +44,25 @@ const [navLink, setnavLink] = useState('')
               <li>
                 <NavLink
                   to="tasks"
-                  activeClassName="nav-links-active"
+                  // activeClassName="nav-links-active"
                   className={`nav-links ${navLink}`}
                 >
                   Projects
                 </NavLink>
               </li>
               <li>
-                <NavLink
-                  to="about"
-                  activeClassName="nav-links-active"
+                <a
+                  href="#about"
+                  // activeClassName="nav-links-active"
                   className={`nav-links ${navLink}`}
                 >
                   About
-                </NavLink>
+                </a>
               </li>
               <li>
                 <NavLink
                   to="tasks"
-                  activeClassName="nav-links-active"
+                  // activeClassName="nav-links-active"
                   className={`nav-links ${navLink}`}
                 >
                   Contact
@@ -74,4 +75,7 @@ const [navLink, setnavLink] = useState('')
       <div className={`line ${hovered}`}></div>
     </div>
   );
-};
+}
+
+
+export default NavBar;
