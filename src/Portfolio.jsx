@@ -26,7 +26,7 @@ const Portfolio = () => {
           </div>
           <figure className="gallery-item">
             <img
-              src="assets\images\heroImg.jpg"
+              src="\heroImg.jpg"
               alt="Sketch done from a web creator photo."
             />
           </figure>
