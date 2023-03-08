@@ -1,7 +1,0 @@
-[[services]]
-  internal_port = 3000
-  protocol = "http"
-  script = "npm start"
-
-  [services.env]
-  NODE_ENV = "production"
