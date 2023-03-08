@@ -1,7 +1,6 @@
 import About from "./components/About";
 import NavBar from "./components/NavBar";
-
-
+import Skills from "./components/Skills";
 
 const Portfolio = () => {
   return (
@@ -16,8 +15,7 @@ const Portfolio = () => {
             </div>
             <div className="hero-Header">
               <h2>
-                Currently looking for a full-time position as a{" "}
-                <b>W</b>
+                Currently looking for a full-time position as a <b>W</b>
                 eb <b>D</b>eveloper.
               </h2>
             </div>
@@ -26,17 +24,19 @@ const Portfolio = () => {
               <p>Joseluy123@gmail.com</p>
             </div>
           </div>
-<figure className="gallery-item">
-
-          <img
-            src="assets\images\heroImg.jpg"
-            alt="Sketch done from a web creator photo."
-          />
-</figure>
+          <figure className="gallery-item">
+            <img
+              src="assets\images\heroImg.jpg"
+              alt="Sketch done from a web creator photo."
+            />
+          </figure>
         </div>
       </div>
       <div id="about">
-      <About />
+        <About />
+      </div>
+      <div id="skillsId">
+        <Skills />
       </div>
     </>
   );

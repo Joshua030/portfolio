@@ -1,7 +1,22 @@
+import { useState } from "react";
+
 const About = () => {
+
+    const [hovered, setHovered] = useState("");
+    
+  
+    const onMouseEnter = () => {
+      setHovered("enter");
+    };
+  
+    const onMouseLeave = () => {
+      setHovered("");
+    };
   return (
     <div className="about-Container" >
-      <div className="brief-Container" >
+         <div className={`point ${hovered}`}></div>
+      <div className="brief-Container"  onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave} >
         <q>
           "Hello! As a Mechanical Engineer turned Full-Stack Developer, I have
           developed a strong set of skills in problem-solving, analytical
@@ -18,6 +33,7 @@ const About = () => {
           my career in front-end development." 
         </q>
       </div>
+      <div className={`point ${hovered}`}></div>
     </div>
   );
 };

@@ -33,13 +33,13 @@ const [navLink, setnavLink] = useState('')
           <nav className="navHeader">
             <ul className="mainNav">
               <li>
-                <NavLink
-                  to="messages"
+                <a
+                href="#skillsId"
                   // activeClassName="nav-links-active"
                   className={`nav-links ${navLink}`}
                 >
-                  Home
-                </NavLink>
+                  Skills
+                </a>
               </li>
               <li>
                 <NavLink
