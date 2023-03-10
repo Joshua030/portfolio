@@ -1,6 +1,6 @@
 export const Card = ({ image, title, content, technologies }) => {
   return (
-    <div className="card">
+    <div className={`card ${title}`}>
       <img src={image} alt={title} className="card-image" />
       <div className="card-content">
         {/* <h3 className="card-title">{title}</h3> */}
@@ -10,7 +10,7 @@ export const Card = ({ image, title, content, technologies }) => {
             return <li key={id}><ion-icon name="bookmark-outline"></ion-icon> {element}</li>;
         })}
         </ul>
-        <a className="card-text" href={content} target="_blank"> Check It out! </a>
+        <a className="card-text" href={content} target="_blank" name={title}> Check It out! </a>
       </div>
     </div>
   );

@@ -39,7 +39,7 @@ const Portfolio = () => {
       <div id="skillsId">
         <Skills />
       </div>
-      <div>
+      <div id="list-Projects">
         <Project />
       </div>
     </>
