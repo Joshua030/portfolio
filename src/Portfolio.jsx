@@ -1,5 +1,6 @@
 import About from "./components/About";
 import NavBar from "./components/NavBar";
+import { Project } from "./components/Project";
 import Skills from "./components/Skills";
 
 const Portfolio = () => {
@@ -37,6 +38,9 @@ const Portfolio = () => {
       </div>
       <div id="skillsId">
         <Skills />
+      </div>
+      <div>
+        <Project />
       </div>
     </>
   );
