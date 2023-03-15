@@ -21,6 +21,13 @@ export const Project = () => {
           content="https://hilarious-crumble-475acb.netlify.app"
           technologies={["React", "css"]}
         />
+        <Card
+          key="DOGSAPP"
+          title="DOGSAPP"
+          image="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTdjZmEzNWQxZWE1OWNmZmFkZTVkOTBiYTM5Y2YzYTcwYzQ0ZTE5ZCZjdD1n/uJiOW4IoB8ys9msPPN/giphy.gif"
+          content="https://dogportfolio1.netlify.app/"
+          technologies={["React", "css"]}
+        />
       </div>
     </div>
   );
