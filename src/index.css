@@ -346,6 +346,10 @@ gap: 4rem;
   box-shadow: 0 8px 16px 0 #5a8c3c;
   transform: scale(1,1);
 }
+.card.COFEESTORE:hover {
+  box-shadow: 0 8px 16px 0 #4f46e5;
+  transform: scale(1,1);
+}
 
 .card-image {
   width: 100%;
@@ -386,7 +390,10 @@ a[name="DOGSAPP"]:hover{
   color:#5a8c3c;
   transform: scale(1.1);
 }
-
+a[name="COFEESTORE"]:hover{
+  color:#4f46e5;
+  transform: scale(1.1);
+}
 
 .project-Description{
   display: grid;

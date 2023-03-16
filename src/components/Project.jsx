@@ -28,6 +28,13 @@ export const Project = () => {
           content="https://dogportfolio1.netlify.app/"
           technologies={["React", "css"]}
         />
+        <Card
+          key="COFEESTORE"
+          title="COFEESTORE"
+          image="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDk0ODdhYjdmNTk5Yjk3Y2EzMDVkYzdlMWIyYjVmMTQ5MzM0NWNmNCZjdD1n/q1R6rEnYnTZrJwXU2W/giphy.gif"
+          content="https://coffee-store-rho.vercel.app/"
+          technologies={["Next.js", "css", "AirTable"]}
+        />
       </div>
     </div>
   );
