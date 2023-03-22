@@ -1,4 +1,5 @@
 import About from "./components/About";
+import Contact from "./components/Contact";
 import NavBar from "./components/NavBar";
 import { Project } from "./components/Project";
 import Skills from "./components/Skills";
@@ -41,6 +42,9 @@ const Portfolio = () => {
       </div>
       <div id="list-Projects">
         <Project />
+      </div>
+      <div id="contactId">
+        <Contact />
       </div>
     </>
   );

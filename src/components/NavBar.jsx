@@ -60,13 +60,13 @@ const [navLink, setnavLink] = useState('')
                 </a>
               </li>
               <li>
-                <NavLink
-                  to="tasks"
+                <a
+                 href="#contactId"
                   // activeClassName="nav-links-active"
                   className={`nav-links ${navLink}`}
                 >
                   Contact
-                </NavLink>
+                </a>
               </li>
             </ul>
           </nav>

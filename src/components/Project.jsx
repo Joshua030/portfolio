@@ -3,8 +3,17 @@ import Card from "./Card";
 export const Project = () => {
   return (
     <div className="projects-Cointainer">
+      <div className="main-title-container">
       <div className="project-MainTitle">
         <h2>PROJECTS</h2>
+      </div>
+      <div className="ghost">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
       </div>
       <div className="project-Description">
         <Card
