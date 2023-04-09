@@ -42,7 +42,14 @@ export const Project = () => {
           title="COFEESTORE"
           image="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDk0ODdhYjdmNTk5Yjk3Y2EzMDVkYzdlMWIyYjVmMTQ5MzM0NWNmNCZjdD1n/q1R6rEnYnTZrJwXU2W/giphy.gif"
           content="https://coffee-store-rho.vercel.app/"
-          technologies={["Next.js", "css", "AirTable"]}
+          technologies={["React", "css", "AirTable"]}
+        />
+        <Card
+          key="ATRAMENTUM"
+          title="ATRAMENTUM"
+          image="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDY3OWMyZTJlMDVjODMxN2Y0NDU2NWUxZjhjNTlmNjVjN2ZkZGE4ZiZjdD1n/pmjdMiwQEz5acXzwmN/giphy.gif"
+          content="https://github.com/Joshua030/Atramentum"
+          technologies={["Ract", "css", "Typescript"]}
         />
       </div>
     </div>
