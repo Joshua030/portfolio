@@ -10,28 +10,30 @@ const Portfolio = () => {
       <div className="hero-Section">
         <NavBar />
         <div className="inner-Section">
-          <div className="information-Header">
-            <div className="hero-Header">
-              <h1>Jose Luis Ceballos</h1>
-              <h3>Full Stack Developer</h3>
+          <div className="inner-container">
+            <div className="information-Header">
+              <div className="hero-Header">
+                <h1>Jose Luis Ceballos</h1>
+                <h3>Full Stack Developer</h3>
+              </div>
+              <div className="hero-Header">
+                <h2>
+                  Currently looking for a full-time position as a <b>W</b>
+                  eb <b>D</b>eveloper.
+                </h2>
+              </div>
+              <div className="footer-Hero">
+                <h3>Barcelona, Spain</h3>
+                <p>Joseluy123@gmail.com</p>
+              </div>
             </div>
-            <div className="hero-Header">
-              <h2>
-                Currently looking for a full-time position as a <b>W</b>
-                eb <b>D</b>eveloper.
-              </h2>
-            </div>
-            <div className="footer-Hero">
-              <h3>Barcelona, Spain</h3>
-              <p>Joseluy123@gmail.com</p>
-            </div>
+            <figure className="gallery-item">
+              <img
+                src="\heroImg.jpg"
+                alt="Sketch done from a web creator photo."
+              />
+            </figure>
           </div>
-          <figure className="gallery-item">
-            <img
-              src="\heroImg.jpg"
-              alt="Sketch done from a web creator photo."
-            />
-          </figure>
         </div>
       </div>
       <div id="about">

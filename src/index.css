@@ -53,18 +53,29 @@ body {
   color: #333232;
   overflow-x: hidden;
   --bkg: #5eb3fd;
-	--white: #e7e6e6;
+  --white: #e7e6e6;
 }
 
 /* HEADER */
 .hero-Section {
   height: 100vh;
   background-color: #d9d9d9;
+  border-bottom:  4px solid #000;
 }
 
 /* NAV BAR */
 
 .firstContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.innerContainer {
+  max-width: 1440px;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -102,7 +113,7 @@ body {
 .line {
   display: inline-block;
   height: 3px;
-  width: 95%;
+  width: 100%;
   background-color: black;
   align-self: center;
   /* transition: all 7s; */
@@ -137,19 +148,27 @@ body {
 /* INNER SECTION */
 
 .inner-Section {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+}
+
+.inner-container {
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: 85vh;
 }
 
 .information-Header {
   padding: 5rem 8rem;
   display: flex;
-  gap:12rem;
+  gap: 12rem;
   flex-direction: column;
   justify-self: center;
   align-self: center;
-
 }
 
 .gallery-item img {
@@ -158,7 +177,7 @@ body {
   height: 37rem;
   /* grid-row: 1/4;
   grid-column: 2/3; */
-border-radius: 100%;
+  border-radius: 100%;
 
   opacity: 0.7;
 
@@ -198,14 +217,13 @@ border-radius: 100%;
   font-weight: 600;
 }
 
-.footer-Hero h3{
+.footer-Hero h3 {
   font-size: 2rem;
-    margin-bottom: 3px;
+  margin-bottom: 3px;
 }
 .footer-Hero p {
   font-size: 1.3rem;
 }
-
 
 /* About */
 
@@ -220,39 +238,73 @@ border-radius: 100%;
 } */
 
 .about-Container {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  width: 100vw;
-  background-color: #101010;
+  width: 100%;
   font-size: 3.25rem;
-  color: #ddd;
-  padding: 7rem;
-  gap: 3rem;
+  border-bottom:  4px solid #000;
+}
+
+.bg-image{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-image: url("/public/Hombre-mirando-pc.jpg");
+height: 100%;
+width: 100%;
+background-size: 100% 100%;
+transition: all 2s ease-in-out;
+}
+
+.bg-image.enter{
+  filter:blur(8px) contrast(180%);
+}
+
+.inner-about-container{
+  display: flex;
+  position: relative;
+ align-content: center;
+  justify-content: space-between;
+  height: 100%; 
+  max-width: 1440px;
+  width: 100%;
+  padding: 10% 7rem;
+
 }
 
 .brief-Container {
-  text-align: center;
-  max-width: 1000px;
-  line-height: 1.3em;
-  letter-spacing: 0.02em;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+  color: white;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 40px;
+  text-align:left;
+  line-height: 1.4em;
+  letter-spacing: 0.04em;
 }
 
 .point {
   width: 0px;
   height: 0px;
-  background:#fff;
+  background-image: linear-gradient(to bottom, red, orange, yellow, green, blue, indigo, violet);
   border-radius: 3px;
-  transition:all 4s ease-out;
+  transition: all 4s ease-out;
   align-self: flex-start;
-
-  
 }
 
 .point.enter {
   width: 6px;
-  height: 65vh;
+  height: 100%;
 }
 
 /* SKILL PAGE */
@@ -263,61 +315,60 @@ border-radius: 100%;
   background-color: #dddddd;
   display: flex;
   flex-direction: column;
- padding: 5rem;
- gap: 4rem;
+  padding: 5rem;
+  gap: 4rem;
 }
 
-.abilities-Container{
+.abilities-Container {
   display: flex;
   font-size: 3rem;
   color: #444;
   font-weight: 600;
   justify-content: center;
-  gap:35rem
+  gap: 35rem;
 }
 
-.abilities-Container ul{
+.abilities-Container ul {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   list-style: none;
 }
 
-.main-Icons{
+.main-Icons {
   display: flex;
   justify-content: center;
   gap: 5rem;
 }
-.title-skills{
-  transition:4s all;
+.title-skills {
+  transition: 4s all;
 }
 .title-skills.initiate {
   /* position: relative; */
   transform: translate(50vw) scale(1.5);
-color: #fff;
-letter-spacing: 0.05em;
-font-family: Consolas, monospace;
+  color: #fff;
+  letter-spacing: 0.05em;
+  font-family: Consolas, monospace;
 }
-
 
 /* PROJECTS */
 
 .projects-Cointainer {
-background-color: #d9d9d9;;
-width: 100vw;
-/* height: 100vh; */
-padding: 10rem;
-display: flex;
-flex-direction: column;
-gap: 4rem;
+  background-color: #d9d9d9;
+  width: 100vw;
+  /* height: 100vh; */
+  padding: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }
 
-.project-MainTitle{
+.project-MainTitle {
   font-size: 4rem;
   color: #fff;
 }
 
-.tecnologies-List{
+.tecnologies-List {
   display: flex;
   gap: 3rem;
   font-size: 3rem;
@@ -338,23 +389,23 @@ gap: 4rem;
 
 .card.OMNIFOOD:hover {
   box-shadow: 0 8px 16px 0 #e67e22;
-  transform: scale(1,1);
+  transform: scale(1, 1);
 }
 .card.GIFEXPERTAPP:hover {
-  box-shadow: 0 8px 16px 0 #FFF468;
-  transform: scale(1,1);
+  box-shadow: 0 8px 16px 0 #fff468;
+  transform: scale(1, 1);
 }
 .card.DOGSAPP:hover {
   box-shadow: 0 8px 16px 0 #5a8c3c;
-  transform: scale(1,1);
+  transform: scale(1, 1);
 }
 .card.COFEESTORE:hover {
   box-shadow: 0 8px 16px 0 #4f46e5;
-  transform: scale(1,1);
+  transform: scale(1, 1);
 }
 .card.ATRAMENTUM:hover {
   box-shadow: 0 8px 16px 0 tan;
-  transform: scale(1,1);
+  transform: scale(1, 1);
 }
 
 .card-image {
@@ -375,37 +426,37 @@ gap: 4rem;
 }
 
 .card-text {
-align-self: flex-end;
-color: #fff;
-font-size: 2rem;
-font-weight: 700;
-text-decoration: none;
-transition: 1s all ease-in;
+  align-self: flex-end;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 1s all ease-in;
 }
 
-a[name="OMNIFOOD"]:hover{
-  color:#e67e22;
-  transform: scale(1.1);
-}
-
-a[name="GIFEXPERTAPP"]:hover{
-  color:#FFF468;
-  transform: scale(1.1);
-}
-a[name="DOGSAPP"]:hover{
-  color:#5a8c3c;
-  transform: scale(1.1);
-}
-a[name="COFEESTORE"]:hover{
-  color:#4f46e5;
-  transform: scale(1.1);
-}
-a[name="ATRAMENTUM"]:hover{
-  color:tan;
+a[name="OMNIFOOD"]:hover {
+  color: #e67e22;
   transform: scale(1.1);
 }
 
-.project-Description{
+a[name="GIFEXPERTAPP"]:hover {
+  color: #fff468;
+  transform: scale(1.1);
+}
+a[name="DOGSAPP"]:hover {
+  color: #5a8c3c;
+  transform: scale(1.1);
+}
+a[name="COFEESTORE"]:hover {
+  color: #4f46e5;
+  transform: scale(1.1);
+}
+a[name="ATRAMENTUM"]:hover {
+  color: tan;
+  transform: scale(1.1);
+}
+
+.project-Description {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -413,11 +464,11 @@ a[name="ATRAMENTUM"]:hover{
 }
 
 .main-title-container {
-	width: 100%;
-	height: 100%;
-	display: grid;
-	place-items: center;
-	overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
 }
 
 /* .title {
@@ -427,76 +478,76 @@ a[name="ATRAMENTUM"]:hover{
 	transform: translate(-50%, -50%);
 } */
 .project-MainTitle h1 {
-	font-size: 25vmin;
-	font-weight: 900;
-	font-family: "Montserrat", sans-serif;
-	color: black;
+  font-size: 25vmin;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+  color: black;
 }
 
 .ghost {
-	width: 8vmin;
-	height: 12vmin;
-	background-color: var(--white);
-	background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
-	background-image: radial-gradient(ellipse at 35% 40%, #000 8%, transparent 0%),
-		radial-gradient(ellipse at 65% 40%, #000 8%, transparent 0%),
-		radial-gradient(ellipse at 50% 60%, #000 8%, transparent 0%);
-	border-radius: 100% / 70% 70% 0% 0%;
-	transform: translateX(100em) rotateZ(-90deg);
-	position: relative;
-	opacity: 0.9;
-	mix-blend-mode: exclusion;
-	animation: ghostMove 4s ease-out infinite;
+  width: 8vmin;
+  height: 12vmin;
+  background-color: var(--white);
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+  background-image: radial-gradient(ellipse at 35% 40%, #000 8%, transparent 0%),
+    radial-gradient(ellipse at 65% 40%, #000 8%, transparent 0%),
+    radial-gradient(ellipse at 50% 60%, #000 8%, transparent 0%);
+  border-radius: 100% / 70% 70% 0% 0%;
+  transform: translateX(100em) rotateZ(-90deg);
+  position: relative;
+  opacity: 0.9;
+  mix-blend-mode: exclusion;
+  animation: ghostMove 4s ease-out infinite;
 }
 @keyframes ghostMove {
-	0% {
-		transform: translateX(30em) rotateZ(-90deg);
-	}
-	100% {
-		transform: translateX(-35em) rotateZ(-90deg);
-	}
+  0% {
+    transform: translateX(30em) rotateZ(-90deg);
+  }
+  100% {
+    transform: translateX(-35em) rotateZ(-90deg);
+  }
 }
 .ghost div {
-	position: absolute;
-	width: 20%;
-	background-color: var(--white);
-	background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+  position: absolute;
+  width: 20%;
+  background-color: var(--white);
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
 }
 .ghost div:nth-of-type(1) {
-	height: 7vmin;
-	left: 0;
-	bottom: -6vmin;
-	border-radius: 100% / 0% 0% 50% 50%;
+  height: 7vmin;
+  left: 0;
+  bottom: -6vmin;
+  border-radius: 100% / 0% 0% 50% 50%;
 }
 .ghost div:nth-of-type(2),
 .ghost div:nth-of-type(4) {
-	height: 4vmin;
-	left: 20%;
-	bottom: -3vmin;
-	border-radius: 100% / 50% 50% 0% 0%;
-	background-color: transparent;
+  height: 4vmin;
+  left: 20%;
+  bottom: -3vmin;
+  border-radius: 100% / 50% 50% 0% 0%;
+  background-color: transparent;
 }
 .ghost div:nth-of-type(3) {
-	height: 4vmin;
-	left: 40%;
-	bottom: -3.95vmin;
-	border-radius: 100% / 0% 0% 60% 60%;
-	background-color: var(--white);
+  height: 4vmin;
+  left: 40%;
+  bottom: -3.95vmin;
+  border-radius: 100% / 0% 0% 60% 60%;
+  background-color: var(--white);
 }
 .ghost div:nth-of-type(4) {
-	left: 60%;
+  left: 60%;
 }
 .ghost div:nth-of-type(5) {
-	height: 3vmin;
-	left: 80%;
-	bottom: -2.9vmin;
-	border-radius: 100% / 0% 0% 70% 70%;
-	background-color: var(--white);
+  height: 3vmin;
+  left: 80%;
+  bottom: -2.9vmin;
+  border-radius: 100% / 0% 0% 70% 70%;
+  background-color: var(--white);
 }
 
 /*contact*/
 
-.contact-container{
+.contact-container {
   width: 100vw;
   /* height: 100vh; */
   background-color: #1f1f1f;
@@ -507,18 +558,16 @@ a[name="ATRAMENTUM"]:hover{
   gap: 8rem;
 }
 
+.contact-container h2 {
+  font-size: 10rem;
+  font-weight: 400;
+  line-height: 18.2rem;
+  color: azure;
+  text-transform: uppercase;
 
-
-.contact-container h2{
-font-size: 10rem;
-font-weight: 400;
-line-height: 18.2rem;
-color:azure;
-text-transform: uppercase;
-
-/* text-align: center; */
+  /* text-align: center; */
 }
-.contact-container h2:hover{
+.contact-container h2:hover {
   color: white;
   text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
@@ -527,35 +576,35 @@ text-transform: uppercase;
   font-size: 6rem;
 } */
 
-.myinformation h2{
-  color:azure;
+.myinformation h2 {
+  color: azure;
   font-size: 7rem;
   font-weight: 300;
 }
 
-.contactme-container{
+.contactme-container {
   display: flex;
   align-items: center;
   /* justify-content: space-around; */
   gap: 34rem;
 }
 
-.encourage-message{
+.encourage-message {
   font-size: 5rem;
   color: #fff;
   line-height: 1.3em;
 }
-.social-logos{
+.social-logos {
   display: flex;
   gap: 20rem;
   align-items: center;
 }
 
-.social-logos ion-icon{
+.social-logos ion-icon {
   font-size: 20rem;
-  color: cadetblue
+  color: cadetblue;
 }
 
-.social-logos ion-icon:hover{
-  color:darkmagenta
+.social-logos ion-icon:hover {
+  color: darkmagenta;
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import "./queries.css";
 import Portfolio  from "./Portfolio";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
