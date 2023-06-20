@@ -20,8 +20,8 @@ const Skills = () => {
         src="/public/skillsbg.mp4"
         autoplay="autoplay"
         loop="true"
-        muted
-        defaultmuted
+        muted="true"
+        defaultMuted = "true"
         playsinline
       ></video>
       <div className="inner-skills-container">
