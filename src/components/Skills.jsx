@@ -17,7 +17,7 @@ const Skills = () => {
     >
       <video
         className="myVideo"
-        src="public\skillsbg.mp4"
+        src="/public/skillsbg.mp4"
         autoplay="autoplay"
         loop="true"
         muted="true"
