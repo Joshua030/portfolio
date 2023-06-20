@@ -24,15 +24,28 @@ const Portfolio = () => {
               </div>
               <div className="footer-Hero">
                 <h3>Barcelona, Spain</h3>
-                <p>Joseluy123@gmail.com</p>
+                <a href="mailto:joseluy123@gmail.com">Joseluy123@gmail.com</a>
               </div>
             </div>
-            <figure className="gallery-item">
-              <img
-                src="\heroImg.jpg"
-                alt="Sketch done from a web creator photo."
-              />
-            </figure>
+            <div className="img-inner-container">
+              <figure className="gallery-item">
+                <img
+                  src="\heroImg.jpg"
+                  alt="Sketch done from a web creator photo."
+                />
+              </figure>
+              <div className="social-logos-header">
+                <a href="https://github.com/Joshua030" target="blank" rel="nofollow" >
+                  <ion-icon
+                    className="social-logo"
+                    name="logo-github"
+                  ></ion-icon>
+                </a>
+                <a href="https://www.linkedin.com/in/ingjlceballos/" target="blank" rel="nofollow">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

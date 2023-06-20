@@ -66,6 +66,7 @@ const Skills = () => {
             <li>Elementor</li>
             <li>AirTable</li>
             <li>Git</li>
+            <li>Java</li>
           </ul>
         </div>
       </div>
