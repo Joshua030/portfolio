@@ -17,12 +17,13 @@ const Skills = () => {
     >
       <video
         className="myVideo"
-        src="/public/skillsbg.mp4"
-        autoplay="autoplay"
-        loop="true"
-        muted="true"
-        defaultMuted = "true"
-        playsinline
+        src="/skillsbg.mp4"
+        autoPlay
+        loop
+        muted
+        defaultMuted
+        playsInline
+        key="skills-video"
       ></video>
       <div className="inner-skills-container">
         <div className="hero-Header">
