@@ -470,7 +470,7 @@ gap: 2rem;
 
 .tecnologies-List {
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   font-size: 3rem;
   font-weight: 500;
   list-style: none;
@@ -485,6 +485,13 @@ gap: 2rem;
   transition: all 1s;
   width: 55rem;
   background-color: #444;
+}
+
+
+
+.card.NETFLIX.CLONE:hover {
+  box-shadow: 0 8px 16px 0 rgb(220, 38, 38);
+  transform: scale(1, 1);
 }
 
 .card.OMNIFOOD:hover {
@@ -532,6 +539,11 @@ gap: 2rem;
   font-weight: 700;
   text-decoration: none;
   transition: 1s all ease-in;
+}
+
+a[name="NETFLIX CLONE"]:hover {
+  color: #e67e22;
+  transform: scale(1.1);
 }
 
 a[name="OMNIFOOD"]:hover {

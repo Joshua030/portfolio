@@ -17,6 +17,13 @@ export const Project = () => {
           </div>
         </div>
         <div className="project-Description">
+        <Card
+            key="NETFLIX-CLONE"
+            title="NETFLIX CLONE"
+            image="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTEwNmI3dDBtYnEwemhhbmxwaDA2ajY3MTBuaTdvNnNpYndsNHcxbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oZWvibFiuV1YSOnYd5/giphy.gif"
+            content="https://github.com/Joshua030/netflix-clone"
+            technologies={["Next", "Typescript", "css" ,"Hasura"]}
+          />
           <Card
             key="OMNIFOOD"
             title="OMNIFOOD"
@@ -51,7 +58,7 @@ export const Project = () => {
             title="ATRAMENTUM"
             image="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDY3OWMyZTJlMDVjODMxN2Y0NDU2NWUxZjhjNTlmNjVjN2ZkZGE4ZiZjdD1n/pmjdMiwQEz5acXzwmN/giphy.gif"
             content="https://github.com/Joshua030/Atramentum"
-            technologies={["Ract", "css", "Typescript"]}
+            technologies={["React", "css", "Typescript"]}
           />
         </div>
       </div>
